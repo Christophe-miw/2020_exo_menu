@@ -1,18 +1,18 @@
-/* line 1, D:/wamp64/www/MIW/HTML-CSS/2020_exo_menu/css/scss/_menu.scss */
+/* line 5, D:/wamp64/www/MIW/HTML-CSS/2020_exo_menu/css/scss/_menu.scss */
 .barrnav {
   width: 100%;
   display: flex;
   flex-direction: column;
-  background-color: lightblue;
+  background-color: #ADD8E6;
 }
 
-/* line 6, D:/wamp64/www/MIW/HTML-CSS/2020_exo_menu/css/scss/_menu.scss */
+/* line 10, D:/wamp64/www/MIW/HTML-CSS/2020_exo_menu/css/scss/_menu.scss */
 .barrnav .hamb {
   width: 100px;
   height: auto;
 }
 
-/* line 12, D:/wamp64/www/MIW/HTML-CSS/2020_exo_menu/css/scss/_menu.scss */
+/* line 16, D:/wamp64/www/MIW/HTML-CSS/2020_exo_menu/css/scss/_menu.scss */
 .link_menu {
   display: none;
   list-style-type: none;
@@ -20,30 +20,31 @@
   padding: 0;
 }
 
-/* line 17, D:/wamp64/www/MIW/HTML-CSS/2020_exo_menu/css/scss/_menu.scss */
+/* line 21, D:/wamp64/www/MIW/HTML-CSS/2020_exo_menu/css/scss/_menu.scss */
 .link_menu li a {
   padding: 10px;
   font-size: 2em;
+  color: #000000;
 }
 
-/* line 23, D:/wamp64/www/MIW/HTML-CSS/2020_exo_menu/css/scss/_menu.scss */
+/* line 28, D:/wamp64/www/MIW/HTML-CSS/2020_exo_menu/css/scss/_menu.scss */
 .toggleStyle {
   display: flex;
   flex-direction: column;
 }
 
 @media (min-width: 970px) {
-  /* line 29, D:/wamp64/www/MIW/HTML-CSS/2020_exo_menu/css/scss/_menu.scss */
+  /* line 34, D:/wamp64/www/MIW/HTML-CSS/2020_exo_menu/css/scss/_menu.scss */
   .hamb {
     display: none;
   }
-  /* line 32, D:/wamp64/www/MIW/HTML-CSS/2020_exo_menu/css/scss/_menu.scss */
+  /* line 37, D:/wamp64/www/MIW/HTML-CSS/2020_exo_menu/css/scss/_menu.scss */
   .link_menu {
     display: flex;
     flex-direction: row;
     justify-content: center;
   }
-  /* line 36, D:/wamp64/www/MIW/HTML-CSS/2020_exo_menu/css/scss/_menu.scss */
+  /* line 41, D:/wamp64/www/MIW/HTML-CSS/2020_exo_menu/css/scss/_menu.scss */
   .link_menu li a {
     padding: 15px;
     font-size: 3em;
