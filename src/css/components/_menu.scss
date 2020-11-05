@@ -5,8 +5,9 @@ $bar_color : #000000;
 $bar_translate : 10px;
 $transition_time: .25s;
 $menu_bg_color : #FFFFFF;
-$breakpoint : 1024px;
-$items_font-size : 2.5rem;
+$mobile_font_size : 2.5rem;
+$desktop_font_size : 1.15rem;
+$breakpoint_desktop : 1024px;
 $desktop_menu_padding : 20px 30px;
 
 body {
@@ -76,13 +77,13 @@ nav.menu.open {
         display: flex;
         flex-direction: column;
         padding: 0;
-        font-size: $items_font-size;
+        font-size: $mobile_font_size;
         list-style: none;
     }
 }
 
 
-@media all and (min-width : $breakpoint) {
+@media all and (min-width : $breakpoint_desktop) {
     .menu_container {
         transform: translateX(0);;
         min-height: inherit;
@@ -90,7 +91,7 @@ nav.menu.open {
         padding: $desktop_menu_padding;
         ul {
             flex-direction: row;
-            font-size: 1.15rem;
+            font-size: $desktop_font_size;
             margin-bottom: 0;
         }
         li {
