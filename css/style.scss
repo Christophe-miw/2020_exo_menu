@@ -37,60 +37,68 @@ ul{
 ul li{
     margin: 0px 10px 0px 10px;
 }
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+$heightNavNar : 40px;
+$fontsize-desktop: 1.3em;
 @include respond-to('small') {
     .barNav{
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
+        @include flex-column;
         align-items: flex-end;
-        justify-content: flex-end;
         background-color: grey;
-        min-height: 50px;
+        min-height: $heightNavNar;
         height: auto;
-    }
-    .hamb{
-        width: 40px;
-        margin-right: 20px;
-    }
-    .nav{
-        display: none;
-    }
-    .dropdown{
-        display: none;
-    }
-    input[type='checkbox']:checked ~ .nav{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top:10px;
-        width: 100%;
-        font-size: 2em;
-    }
+        .hamb{
+            width: $heightNavNar;
+            margin-right: 20px;
+        }
+        .dropdown{
+            display: none;
+        }
+        .nav{
+            display: none;
+        }
+        input[type='checkbox']:checked ~ .nav{
+            @include flex-column;
+            align-items: center;
+            font-size: 2em;
+        }
+    }   
 }
 
 @include respond-to('medium') {
-    input[type='checkbox']:checked ~ .nav{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-top:10px;
-        font-size: 1em;
-        width: 100%;
-    }
         .barNav{
+            height: 50px;
             display: flex;
             justify-content: center;
+             .hamb{
+                display: none;
+            }
+            input[type='checkbox']:checked ~ .nav{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                font-size: $fontsize-desktop;
+                width: 100%;
+            }
+            .nav{
+                height: $heightNavNar;
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+                font-size: $fontsize-desktop;
+                
+                li {
+                    margin-right: 40px;
+                }
+            }
+            
         }
-        .nav{
-            display: flex;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-        }
-        .nav li{
-            margin-right: 40px;
-        }
-        .hamb{
-            display: none;
-        }
+        
+    
 }

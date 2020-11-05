@@ -16,74 +16,75 @@ ul li {
 
 @media (min-width: 0px) {
   .barNav {
-    width: 100vw;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column;
+    width: 100%;
     -ms-flex-align: end;
         align-items: flex-end;
-    -ms-flex-pack: end;
-        justify-content: flex-end;
     background-color: grey;
-    min-height: 50px;
+    min-height: 40px;
     height: auto;
   }
-  .hamb {
+  .barNav .hamb {
     width: 40px;
     margin-right: 20px;
   }
-  .nav {
+  .barNav .dropdown {
     display: none;
   }
-  .dropdown {
+  .barNav .nav {
     display: none;
   }
-  input[type='checkbox']:checked ~ .nav {
+  .barNav input[type='checkbox']:checked ~ .nav {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column;
+    width: 100%;
     -ms-flex-align: center;
         align-items: center;
-    margin-top: 10px;
-    width: 100%;
     font-size: 2em;
   }
 }
 
 @media (min-width: 800px) {
-  input[type='checkbox']:checked ~ .nav {
+  .barNav {
+    height: 50px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .barNav .hamb {
+    display: none;
+  }
+  .barNav input[type='checkbox']:checked ~ .nav {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: row;
         flex-direction: row;
     -ms-flex-align: center;
         align-items: center;
-    margin-top: 10px;
-    font-size: 1em;
+    font-size: 1.3em;
     width: 100%;
   }
-  .barNav {
+  .barNav .nav {
+    height: 40px;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-pack: center;
-        justify-content: center;
-  }
-  .nav {
-    display: -ms-flexbox;
-    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
     width: 100%;
     -ms-flex-pack: center;
         justify-content: center;
     -ms-flex-align: center;
         align-items: center;
+    font-size: 1.3em;
   }
-  .nav li {
+  .barNav .nav li {
     margin-right: 40px;
-  }
-  .hamb {
-    display: none;
   }
 }
 
