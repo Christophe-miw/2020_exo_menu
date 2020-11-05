@@ -9,11 +9,8 @@ body {
   background-position: top;
 }
 
-.flex {
-  display: flex;
-}
-
 .barrnav {
+  display: flex;
   background-color: #7c0101;
   justify-content: flex-end;
   flex-direction: column;
