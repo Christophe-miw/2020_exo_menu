@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <ul class="nav-bar">
+        <li><a href="eval_layout_menu.html">Accueil</a></li>
+        <li><a href="cerise.html">Cerise</a></li>
+        <li><a href="poire.html">Poire</a></li>
+        <li><a href="pomme.html">Pomme</a></li>
+        <li><a href="tomate.html">Tomate</a></li>
+
+    </ul>
+
+    <div class="hamb">
+        <img class="hamb" src="img/hamburger.png" alt="hamb">
+    </div>
+</nav>
+
+<div class="fond">
+    <img class="cerise" src="img/tomate.jpg">
+</div>
+
+<script>
+
+    const navigation = () => {
+        var hamb = document.querySelector('.hamb')
+        var nav = document.querySelector('.nav-bar')
+        var div = document.querySelector('.fond')
+
+        hamb.addEventListener('click',() => {
+            nav.classList.toggle('nav-click');
+            div.classList.toggle('image-click');
+        });
+    }
+
+    navigation();
+</script>
+
+</body>
+</html>
+
+
+</body>
+</html>
