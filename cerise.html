@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-image: url('./img/cerise.jpg');">
+
+
+
+    <button class="ham"></button>
+    <nav class="navbar">
+        <ul>
+            <li><a class="menuLink" href="accueil.html">Accueil</a></li>
+            <li><a class="menuLink" href="cerise.html">Cerise</a></li>
+            <li><a class="menuLink" href="poire.html">Poire</a></li>
+            <li><a class="menuLink" href="#">Pomme</a></li>
+            <li><a class="menuLink" href="#">Tomate</a></li>
+
+        </ul>
+    </nav>
+    <div class="title">
+        <h1>Cerise</h1>
+    </div>
+
+
+</body>
+<script>
+    let navbar = document.querySelector(".navbar")
+    let ham = document.querySelector(".ham")
+
+
+    function toggleHamburger() {
+        navbar.classList.toggle("showNav")
+        ham.classList.toggle("showClose")
+    }
+
+    ham.addEventListener("click", toggleHamburger)
+</script>
+
+</html>
