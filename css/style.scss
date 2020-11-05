@@ -61,11 +61,22 @@ ul li{
     input[type='checkbox']:checked ~ .nav{
         display: flex;
         flex-direction: column;
+        align-items: center;
         margin-top:10px;
+        width: 100%;
+        font-size: 2em;
     }
 }
 
 @include respond-to('medium') {
+    input[type='checkbox']:checked ~ .nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top:10px;
+        font-size: 1em;
+        width: 100%;
+    }
         .barNav{
             display: flex;
             justify-content: center;
@@ -73,8 +84,11 @@ ul li{
         .nav{
             display: flex;
             width: 100%;
-            justify-content: space-evenly;
+            justify-content: center;
             align-items: center;
+        }
+        .nav li{
+            margin-right: 40px;
         }
         .hamb{
             display: none;

@@ -44,11 +44,26 @@ ul li {
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column;
+    -ms-flex-align: center;
+        align-items: center;
     margin-top: 10px;
+    width: 100%;
+    font-size: 2em;
   }
 }
 
 @media (min-width: 800px) {
+  input[type='checkbox']:checked ~ .nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-align: center;
+        align-items: center;
+    margin-top: 10px;
+    font-size: 1em;
+    width: 100%;
+  }
   .barNav {
     display: -ms-flexbox;
     display: flex;
@@ -59,10 +74,13 @@ ul li {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    -ms-flex-pack: space-evenly;
-        justify-content: space-evenly;
+    -ms-flex-pack: center;
+        justify-content: center;
     -ms-flex-align: center;
         align-items: center;
+  }
+  .nav li {
+    margin-right: 40px;
   }
   .hamb {
     display: none;
