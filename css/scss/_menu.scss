@@ -1,6 +1,8 @@
 $fondMenu: #ADD8E6;
 $textMenu: #000000;
 $alignMenu : center;
+$paddingA : 10px;
+$sizeFont : 2em;
 
 .barrnav{
   width: 100%;
@@ -19,8 +21,8 @@ $alignMenu : center;
   margin: 0;
   padding: 0;
   li a {
-    padding: 10px;
-    font-size: 2em;
+    padding: $paddingA;
+    font-size: $sizeFont;
     color: $textMenu;
   }
 }
@@ -40,7 +42,7 @@ $alignMenu : center;
       justify-content: $alignMenu;
       li a {
         padding: 15px;
-        font-size: 3em;
+        font-size: $sizeFont + 1;
       }
     }
 }
