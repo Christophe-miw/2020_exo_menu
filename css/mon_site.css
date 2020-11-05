@@ -1,15 +1,40 @@
-* {
-  border: 1px solid grey;
+@charset "UTF-8";
+/* DEV — affichage du contour des blocs */
+.barrnav {
+  background-color: #0002;
+  color: #000;
 }
 
-.hamb {
+.barrnav a {
+  color: inherit;
+}
+
+.bienvenue {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 88px;
+  margin-left: 14px;
+}
+
+.hamb, .checkMenu {
   width: 60px;
+  height: 60px;
   position: fixed;
   top: 14px;
   right: 14px;
 }
 
+.checkMenu {
+  opacity: 0;
+}
+
 ul.menu {
+  display: none;
+}
+
+input[type='checkbox']:checked ~ ul.menu {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -18,8 +43,9 @@ ul.menu {
   padding: 0px;
 }
 
-ul.menu li {
+input[type='checkbox']:checked ~ ul.menu li {
   margin: 10px;
+  text-align: center;
 }
 
 /*# sourceMappingURL=mon_site.css.map */

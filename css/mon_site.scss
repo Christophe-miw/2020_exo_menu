@@ -1,20 +1,51 @@
+/* DEV — affichage du contour des blocs */
 * {
-  border: 1px solid grey;
+  //border: 1px solid grey;
 }
 
-.hamb {
+.barrnav {
+  background-color: #0002;
+  color: #000;
+  a {
+    color: inherit;
+  }
+}
+
+.bienvenue {
+  display: flex;
+  align-items: center;
+  height: 88px;
+  margin-left: 14px;
+}
+
+%hamburgerFixed {
   width: 60px;
+  height: 60px;
   position: fixed;
   top: 14px;
   right: 14px;
 }
 
+.hamb {
+  @extend %hamburgerFixed;
+}
+
+.checkMenu {
+  @extend %hamburgerFixed;
+  opacity: 0;
+}
+
 ul.menu {
+  display: none;
+}
+
+input[type='checkbox']:checked ~ ul.menu {
   display: flex;
   flex-direction: column;
   list-style: none;
   padding: 0px;
   li {
     margin: 10px;
+    text-align: center;
   }
 }
