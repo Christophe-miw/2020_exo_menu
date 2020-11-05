@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url("img/accueil.jpg");
+    background: url("img/accueil.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 html{
@@ -16,7 +16,8 @@ img{
     background-color: rgba(255, 255, 255, 0.5);
     display: flex;
     justify-content: flex-end;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    border-bottom: solid black 1px;
     
 }
 .menu{
@@ -25,10 +26,9 @@ img{
 }
 
 .element{
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     border: solid black 1px;
-    border-radius: 10px;
     height: 50px;
     line-height: 50px;
     font-size: 2rem;
@@ -55,6 +55,9 @@ img{
     .nav{
         display: inline;
         /* justify-content: initial; */
+    }
+    .element:hover{
+        background-color: rgba(255, 255, 255, 1);
     }
 }
 

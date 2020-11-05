@@ -8,9 +8,6 @@
 	</head>
 	<body>
 		<div class="nav">
-			<div class="hamburger">
-					<img src="img/hamburger.png" onclick="afficheMenu()">
-			</div>
 			<div class="cache" id ="menu">
 				<a href="poire.html"><div class="element">Cerise</div></a>
 				<a href="poire.html"><div class="element">Poire</div></a>
@@ -18,17 +15,20 @@
 				<a href="poire.html"><div class="element">Tomate</div></a>
 				
 			</div>
+					<div class="hamburger">
+						<img src="img/hamburger.png" onclick="afficheMenu()">
+					</div>
 		</div>
-
-
+		
+		
 	</body>
 </html>
 <script>
 	let affiche = false;
-	let menu = document.getElementById("menu");
+	let menu    = document.getElementById("menu");
 
 	function afficheMenu(){
-		affiche = !affiche;
+		affiche                = !affiche;
 		affiche?menu.className = "menu":menu.className = "cache";
 	}
 </script>
