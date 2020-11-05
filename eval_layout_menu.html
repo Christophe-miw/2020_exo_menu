@@ -1,21 +1,46 @@
 <!DOCTYPE html>
 <html class="accueil" lang="fr">
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Eval Layout menu</title>
-		<link rel="stylesheet" href="css/mon_site.css">
-	</head>
-	<body>
 
-		<nav class="barrnav">
-			<img class="hamb" src="img/hamburger.png" alt="hamb">
-			<ul>
-				<li><a class="tit" href="#">accueil</a></li>
-				...
-			</ul>
-		</nav>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Eval Layout menu</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="style.js"></script>
+
+</head>
+
+<body style="background-image: url(' img/accueil.jpg')">
 
 
-	</body>
+	<div class="navbar">
+		<div class="gauche">
+			<h1>Accueil</h1>
+		</div>
+
+		<div class="hamb">
+			<div class="bouton">
+				<button onclick="burger()" alt="hamb" id="hamburger"><img src="img/hamburger.png"
+						width="80px;" /></button>
+			</div>
+			<div id="menu" class="inactive">
+				<div class="sous-menu"><a href="eval_layout_menu.html">accueil</a></div>
+				<div class="sous-menu"><a href="cerise.html">cerise</a></div>
+				<div class="sous-menu"><a href="poire.html">poire</a></div>
+				<div class="sous-menu"><a href="pomme.html">pomme</a></div>
+				<div class="sous-menu"><a href="tomate.html">tomate</a></div>
+			</div>
+		</div>
+
+
+
+
+	</div>
+
+
+
+
+</body>
+
 </html>
