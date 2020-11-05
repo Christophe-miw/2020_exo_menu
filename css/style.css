@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.flex {
+  display: flex;
+}
+
+.barrnav {
+  background-color: #7c0101;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: #fd4139;
+}
+
+.menu > a {
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+  border: solid black;
+}
+
+.menu > a:hover {
+  background-color: #e37b77;
+}
+
+.hamb {
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.hamb > span {
+  display: block;
+  width: 100%;
+  border: solid black 4px;
+  border-radius: 5%;
+  height: 5px;
+  line-height: 1em;
+  margin-bottom: 5px;
+}
+
+.clicked > span:nth-child(2n) {
+  visibility: hidden;
+}
+
+.clicked > span:first-child {
+  transform: rotate(45deg);
+  position: relative;
+  top: 16px;
+}
+
+.clicked > span:last-child {
+  transform: rotate(135deg);
+  position: relative;
+  top: -10px;
+}
+
+.none {
+  display: none;
+}
+
+.accueil {
+  background-image: url("../img/accueil.jpg");
+}
+
+.cerise {
+  background-image: url("../img/cerise.jpg");
+}
+
+.tomate {
+  background-image: url("../img/tomate.jpg");
+}
+
+/* tablette */
+@media (min-width: 769px) {
+}
+
+/* desktop */
+@media (min-width: 971px) {
+  .hamb {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+  }
+
+  .barrnav {
+    flex-direction: inherit;
+  }
+}
+
+/* desktopG */
+@media (min-width: 1371px) {
+}
