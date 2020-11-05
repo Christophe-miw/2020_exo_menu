@@ -1,0 +1,168 @@
+/***********************************/
+/*          INITALISATION          */
+/*                                 */
+/***********************************/
+html, body, nav, header, footer {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul, ol, li, a {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+/***********************************/
+/*             DEFAULT             */
+/*            TELEPHONE            */
+/***********************************/
+h1, h2, h3, h4, h5, .tit {
+  color: white;
+  border: black solid 1px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: black;
+}
+
+.displayNone {
+  display: none;
+}
+
+.displayBlock {
+  display: block;
+}
+
+.coverFond {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url("../img/accueil.jpg");
+}
+
+.Center {
+  width: 100%;
+  height: 100vh;
+}
+
+.flexCenterRow {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-direction: row;
+      flex-direction: row;
+}
+
+.flexCenterRowInver {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+}
+
+.flexCenterCol {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -ms-flex-direction: column;
+      flex-direction: column;
+}
+
+.barrnav {
+  width: 100%;
+  height: 100%;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.barrnav img {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40px;
+  height: auto;
+  max-width: 100%;
+  margin-left: 25px;
+  z-index: 1;
+}
+
+#UlMenu {
+  position: absolute;
+  top: 25%;
+  z-index: 1;
+}
+
+.RowA {
+  margin: 5px;
+  padding: 20px;
+}
+
+.RowA:hover {
+  color: black;
+  background-color: darkgrey;
+}
+
+.navGrey {
+  /*transition: 250ms;*/
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+}
+
+/***********************************/
+/*             DESKTOP             */
+/***********************************/
+@media screen and (min-width: 970px) {
+  .displayBlock {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-direction: row;
+        flex-direction: row;
+  }
+  #UlMenu {
+    position: relative;
+    top: 0;
+  }
+  .RowA {
+    padding: 0px;
+    border: darkgrey solid 1px;
+  }
+  .barrnav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: auto;
+    height: 80px;
+  }
+  .barrnav img {
+    position: relative;
+    top: 0;
+    right: 0;
+    width: 70px;
+  }
+  .navGrey {
+    background-color: transparent;
+  }
+}
+
+/*# sourceMappingURL=eval_layout_menu.css.map */
