@@ -1,0 +1,79 @@
+/*PARTIE NAV*/
+.barrnav{
+    height: 85px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+.barrnav input{
+    display: none;
+}
+.barrnav img{
+    width: 80px;
+    margin-right: 30px;
+}
+.barrnav ul {
+    display: none;
+    list-style-type: none;
+    color: black;
+    font-size: 2em;
+}
+
+/*Modifications avec l'etat checked*/
+#toggleMenu:checked ~ ul{
+    display: block;
+    width: 100%;
+    padding: 25px;
+    background-color: white;
+    text-align: center;
+    margin-top: -10px;
+}
+#toggleMenu:checked ~ ul li{
+    padding: 10px;
+}
+/*REMPLACEMENT DU HAMBURGER PAR UNE CROIX*/
+
+/*#toggleMenu:checked + label img{
+    display: none;
+}
+#toggleMenu:checked + label::after{
+    display: block;
+    content: "";
+    height: 60px;
+    width: 60px;
+    margin-top: 15px;
+    margin-right: 25px;
+    background: url('https://images.emojiterra.com/google/android-10/512px/274c.png');
+    background-size: cover;
+}*/
+
+@media (min-width: 970px){
+    .barrnav{
+        height: 85px;
+        width: 100%;
+        background-color: white;
+        display: block;
+    }
+    .barrnav img{
+        display: none;
+    }
+    .barrnav ul li{
+        display: inline-block;
+        text-align: center;
+    }
+    .barrnav ul,
+    #toggleMenu:checked ~ ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        color: black;
+        width: 80%;
+        margin: 0 auto;
+    }
+    /*#toggleMenu:checked + label::after{
+        content: none;
+    }*/
+}
