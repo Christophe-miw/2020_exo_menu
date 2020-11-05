@@ -1,3 +1,4 @@
+/* ------- GENERAL ------- */
 img {
   width: 100%;
 }
@@ -14,6 +15,9 @@ ul li {
   margin: 0px 10px 0px 10px;
 }
 
+/* ------- MIXIN RACCOURCIS ------- */
+/* ------- DECLARATION VARIABLES ------- */
+/* ------- STYLE POUR ECRAN TAILLE SMALL ------- */
 @media (min-width: 0px) {
   .barNav {
     display: -ms-flexbox;
@@ -49,6 +53,7 @@ ul li {
   }
 }
 
+/* ------- STYLE POUR ECRAN TAILLE MEDIUM ------- */
 @media (min-width: 800px) {
   .barNav {
     height: 50px;

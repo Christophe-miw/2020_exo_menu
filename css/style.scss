@@ -8,7 +8,7 @@ $breakpoints: (
 
 //Mixin qui permet d'utiliser facilement les mediaQueries
 @mixin respond-to($breakpoint) {
-    // Retrieves the value from the key
+    // Recuperer la valeur depuis la clé
     $value: map-get($breakpoints, $breakpoint);
     
     //Si la clé existe dans la MAP
@@ -19,12 +19,13 @@ $breakpoints: (
         }
     }
     
-    // If the key doesn't exist in the map
+    //Si le media n'existe pas dans la map
     @else {
         @warn "Problème `#{$breakpoint}`. "
             + "Vérifier que  `$breakpoints` est définit dans la map.";
     }
 }
+/* ------- GENERAL ------- */
 img{
     width: 100%;
 }
@@ -37,30 +38,44 @@ ul{
 ul li{
     margin: 0px 10px 0px 10px;
 }
+/* ------- MIXIN RACCOURCIS ------- */
 @mixin flex-column{
     display: flex;
     flex-direction: column;
     width: 100%;
 }
+
+/* ------- DECLARATION VARIABLES ------- */
 $heightNavNar : 40px;
 $fontsize-desktop: 1.3em;
+
+/* ------- STYLE POUR ECRAN TAILLE SMALL ------- */
 @include respond-to('small') {
     .barNav{
+        //Mettre les elements de la barNav en colonne + hauteur adaptable au contenu
         @include flex-column;
         align-items: flex-end;
         background-color: grey;
         min-height: $heightNavNar;
         height: auto;
+
+        //Taille de l'hamburger = taille de la navBar et decaler hamburger à gauche
         .hamb{
             width: $heightNavNar;
             margin-right: 20px;
         }
+
+        //Masquer le champ input
         .dropdown{
             display: none;
         }
+
+        //Par defaut, rendre les liens invisible
         .nav{
             display: none;
         }
+
+        //Afficher liens en colonne centrer
         input[type='checkbox']:checked ~ .nav{
             @include flex-column;
             align-items: center;
@@ -69,14 +84,19 @@ $fontsize-desktop: 1.3em;
     }   
 }
 
+/* ------- STYLE POUR ECRAN TAILLE MEDIUM ------- */
 @include respond-to('medium') {
         .barNav{
             height: 50px;
             display: flex;
             justify-content: center;
+
+            //Masque l'hamburger
              .hamb{
                 display: none;
             }
+
+            //Fermer le menu mobile ouvert si l'on passe au medium
             input[type='checkbox']:checked ~ .nav{
                 display: flex;
                 flex-direction: row;
@@ -84,6 +104,8 @@ $fontsize-desktop: 1.3em;
                 font-size: $fontsize-desktop;
                 width: 100%;
             }
+
+            //Remettre les liens en ligne, et centrer dans le navbar
             .nav{
                 height: $heightNavNar;
                 display: flex;
@@ -93,6 +115,7 @@ $fontsize-desktop: 1.3em;
                 align-items: center;
                 font-size: $fontsize-desktop;
                 
+                //Espacer les liens entre-eux
                 li {
                     margin-right: 40px;
                 }
