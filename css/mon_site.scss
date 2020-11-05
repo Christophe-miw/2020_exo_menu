@@ -1,4 +1,10 @@
-@import 'placeholders';
+@import 'menu';
+
+%bgBody {
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
 
 html, body {
   height: 100%;
@@ -12,78 +18,4 @@ html, body {
 .cerise {
   @extend %bgBody;
   background-image: url("../img/cerise.jpg");
-}
-
-.barrnav {
-  color: #000;
-  a {
-    color: inherit;
-  }
-}
-
-.titre {
-  @extend %bgNavbar;
-  display: flex;
-  align-items: center;
-  height: 88px;
-  h1 {
-    margin: 0 0 0 28px;
-  }
-}
-
-.hamb {
-  @extend %hamburgerFixed;
-}
-
-.checkMenu {
-  @extend %hamburgerFixed;
-  opacity: 0;
-}
-
-ul.menu {
-  @extend %bgNavbar;
-  display: none;
-  list-style: none;
-  flex-direction: column;
-  justify-content: space-between;
-  position: fixed;
-  right: 0;
-  margin: 0;
-  padding: 0;
-  li {
-    margin: 10px 0;
-    min-width: 116px;
-    text-align: center;
-  }
-}
-
-input[type='checkbox']:checked ~ ul.menu {
-  display: flex;
-}
-
-
-@media screen and (min-width: 768px) {
-
-  .hamb, .checkMenu {
-    display: none;
-  }
-
-  ul.menu {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 1;
-    width: initial;
-  }
-
-  .barrnav {
-    @extend %bgNavbar;
-    display: flex;
-    align-items: center;
-    margin: 0 auto;
-  }
-
-  .titre, ul.menu {
-    background: initial;
-  }
-
 }

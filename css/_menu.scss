@@ -1,0 +1,109 @@
+/* **************************** */
+/* SCSS pour le menu responsive */
+/* **************************** */
+
+
+/* variables */
+$bgColor: #FFFD;
+$hauteurBarre: 88px;
+$breakpointMenu: 768px;
+
+
+/* placeholders */
+%bgNavbar {
+  background-color: $bgColor;
+}
+
+%hamburgerFixed {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  top: 14px;
+  right: 28px;
+}
+
+
+/* CSS */
+.barreMenu {
+  display: flex;
+  @extend %bgNavbar;
+}
+
+.titre {
+  display: flex;
+  align-items: center;
+  height: $hauteurBarre;
+  h1 {
+    margin: 0 0 0 28px;
+  }
+}
+
+.barrnav {
+  color: #000;
+  a {
+    color: inherit;
+  }
+}
+
+.hamb {
+  @extend %hamburgerFixed;
+}
+
+.checkMenu {
+  @extend %hamburgerFixed;
+  opacity: 0;
+}
+
+.menu {
+  @extend %bgNavbar;
+  display: none;
+  list-style: none;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: $hauteurBarre;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  li {
+    margin: 10px 24px;
+    min-width: 116px;
+    text-align: right;
+  }
+}
+
+input[type='checkbox']:checked ~ ul.menu {
+  display: flex;
+}
+
+
+/* media query responsive */
+@media screen and (min-width: $breakpointMenu) {
+
+  .hamb, .checkMenu {
+    display: none;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    width: initial;
+    top: initial;
+    li {
+      text-align: center;
+      min-width: initial;
+    }
+  }
+
+  .barrnav {
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .titre, .menu, .barrnav {
+    background: initial;
+  }
+
+}

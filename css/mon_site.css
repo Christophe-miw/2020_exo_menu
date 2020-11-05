@@ -1,42 +1,10 @@
-@charset "UTF-8";
-/* DEV — affichage du contour des blocs */
-html, body {
-  height: 100%;
-}
-
-.accueil, .cerise {
-  background-size: cover;
-  background-position: bottom;
-  background-repeat: no-repeat;
-}
-
-.accueil {
-  background-image: url("../img/accueil.jpg");
-}
-
-.cerise {
-  background-image: url("../img/cerise.jpg");
-}
-
-.barrnav {
-  color: #000;
-}
-
-.barrnav a {
-  color: inherit;
-}
-
-.titre {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  height: 88px;
+/* **************************** */
+/* SCSS pour le menu responsive */
+/* **************************** */
+/* variables */
+/* placeholders */
+.barreMenu, .menu {
   background-color: #FFFD;
-}
-
-.titre h1 {
-  margin: 0 0 0 28px;
 }
 
 .hamb, .checkMenu {
@@ -47,28 +15,54 @@ html, body {
   right: 28px;
 }
 
+/* CSS */
+.barreMenu {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.titre {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 88px;
+}
+
+.titre h1 {
+  margin: 0 0 0 28px;
+}
+
+.barrnav {
+  color: #000;
+}
+
+.barrnav a {
+  color: inherit;
+}
+
 .checkMenu {
   opacity: 0;
 }
 
-ul.menu {
+.menu {
   display: none;
   list-style: none;
   -ms-flex-direction: column;
       flex-direction: column;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  background-color: #FFFD;
   position: fixed;
+  top: 88px;
   right: 0;
   margin: 0;
   padding: 0;
 }
 
-ul.menu li {
-  margin: 10px 0;
+.menu li {
+  margin: 10px 24px;
   min-width: 116px;
-  text-align: center;
+  text-align: right;
 }
 
 input[type='checkbox']:checked ~ ul.menu {
@@ -76,11 +70,12 @@ input[type='checkbox']:checked ~ ul.menu {
   display: flex;
 }
 
+/* media query responsive */
 @media screen and (min-width: 768px) {
   .hamb, .checkMenu {
     display: none;
   }
-  ul.menu {
+  .menu {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-direction: row;
@@ -88,6 +83,11 @@ input[type='checkbox']:checked ~ ul.menu {
     -ms-flex-positive: 1;
         flex-grow: 1;
     width: initial;
+    top: initial;
+  }
+  .menu li {
+    text-align: center;
+    min-width: initial;
   }
   .barrnav {
     display: -ms-flexbox;
@@ -95,11 +95,28 @@ input[type='checkbox']:checked ~ ul.menu {
     -ms-flex-align: center;
         align-items: center;
     margin: 0 auto;
-    background-color: #FFFD;
   }
-  .titre, ul.menu {
+  .titre, .menu, .barrnav {
     background: initial;
   }
+}
+
+.accueil, .cerise {
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+html, body {
+  height: 100%;
+}
+
+.accueil {
+  background-image: url("../img/accueil.jpg");
+}
+
+.cerise {
+  background-image: url("../img/cerise.jpg");
 }
 
 /*# sourceMappingURL=mon_site.css.map */
