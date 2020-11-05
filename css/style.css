@@ -31,24 +31,22 @@
     margin-top: -10px;
 }
 #toggleMenu:checked ~ ul li{
-    padding: 10px;
+    padding: 5px;
 }
-/*REMPLACEMENT DU HAMBURGER PAR UNE CROIX*/
 
-/*#toggleMenu:checked + label img{
-    display: none;
+/*PARTIE DU MILIEU AVEC LE TITRE*/
+.container{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-#toggleMenu:checked + label::after{
-    display: block;
-    content: "";
-    height: 60px;
-    width: 60px;
-    margin-top: 15px;
-    margin-right: 25px;
-    background: url('https://images.emojiterra.com/google/android-10/512px/274c.png');
-    background-size: cover;
-}*/
+.container h1{
+    padding: 50px;
+    background-color: white;
+}
 
+/*DESKTOP*/
 @media (min-width: 970px){
     .barrnav{
         height: 85px;
@@ -56,7 +54,7 @@
         background-color: white;
         display: block;
     }
-    .barrnav img{
+    img{
         display: none;
     }
     .barrnav ul li{
@@ -73,7 +71,4 @@
         width: 80%;
         margin: 0 auto;
     }
-    /*#toggleMenu:checked + label::after{
-        content: none;
-    }*/
 }
