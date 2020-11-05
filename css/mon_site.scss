@@ -7,11 +7,20 @@ html, body {
   height: 100%;
 }
 
-.accueil {
-  background-image: url("../img/accueil.jpg");
+%bgBody {
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
+}
+
+.accueil {
+  @extend %bgBody;
+  background-image: url("../img/accueil.jpg");
+}
+
+.cerise {
+  @extend %bgBody;
+  background-image: url("../img/cerise.jpg");
 }
 
 .barrnav {
@@ -25,7 +34,7 @@ html, body {
   display: flex;
   align-items: center;
   height: 88px;
-  margin-left: 28px;
+  padding-left: 28px;
   h1 {
     margin: 0;
   }
