@@ -1,0 +1,122 @@
+/* **************************** */
+/* SCSS pour le menu responsive */
+/* **************************** */
+/* variables */
+/* placeholders */
+.barreMenu, .menu {
+  background-color: #FFFD;
+}
+
+.hamb, .checkMenu {
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  top: 14px;
+  right: 28px;
+}
+
+/* CSS */
+.barreMenu {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.titre {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  height: 88px;
+}
+
+.titre h1 {
+  margin: 0 0 0 28px;
+}
+
+.barrnav {
+  color: #000;
+}
+
+.barrnav a {
+  color: inherit;
+}
+
+.checkMenu {
+  opacity: 0;
+}
+
+.menu {
+  display: none;
+  list-style: none;
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  position: fixed;
+  top: 88px;
+  right: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin: 10px 24px;
+  min-width: 116px;
+  text-align: right;
+}
+
+input[type='checkbox']:checked ~ ul.menu {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/* media query responsive */
+@media screen and (min-width: 768px) {
+  .hamb, .checkMenu {
+    display: none;
+  }
+  .menu {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-positive: 1;
+        flex-grow: 1;
+    width: initial;
+    top: initial;
+  }
+  .menu li {
+    text-align: center;
+    min-width: initial;
+  }
+  .barrnav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+        align-items: center;
+    margin: 0 auto;
+  }
+  .titre, .menu, .barrnav {
+    background: initial;
+  }
+}
+
+.accueil, .cerise {
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+html, body {
+  height: 100%;
+}
+
+.accueil {
+  background-image: url("../img/accueil.jpg");
+}
+
+.cerise {
+  background-image: url("../img/cerise.jpg");
+}
+
+/*# sourceMappingURL=mon_site.css.map */

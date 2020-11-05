@@ -1,0 +1,21 @@
+@import 'menu';
+
+%bgBody {
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+html, body {
+  height: 100%;
+}
+
+.accueil {
+  @extend %bgBody;
+  background-image: url("../img/accueil.jpg");
+}
+
+.cerise {
+  @extend %bgBody;
+  background-image: url("../img/cerise.jpg");
+}
