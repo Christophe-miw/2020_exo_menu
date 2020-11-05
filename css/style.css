@@ -1,0 +1,128 @@
+.titre{
+    text-align: center;
+}
+
+.hamb{
+    height:50px;
+    margin-left:35px;
+}
+
+.barrnav{
+    margin-top:-55px;
+    margin-right:20px;
+    float:right;
+}
+
+
+/***************************
+   Ajout des images en fond
+ **************************/
+
+.accueil{
+    background-image: url('../img/accueil.jpg');
+    background-size:cover;
+
+}
+
+.cerise{
+    background: url('../img/cerise.jpg');
+    background-size:cover;
+
+}
+
+.poire{
+    background: url('../img/poire.jpg');
+    background-size:cover;
+
+}
+
+.pomme{
+    background: url('../img/pomme.jpg');
+    background-size:cover;
+}
+
+.tomate{
+    background: url('../img/tomate.jpg');
+    background-size:cover;
+}
+
+
+html{
+    height:100vh;
+}
+
+
+/* en version mobile on cache les éléments du menu burger  de base*/
+
+ul{
+    display:none;
+}
+
+/* Toggle pour afficher le sous menu*/
+.styleToggle{
+    display:block;
+    list-style: none;
+}
+
+li{
+    background-color:#868e96;
+    opacity: 70%;
+    padding:5px;
+}
+
+li>a {
+    color:black;
+    font-size:22px;
+}
+
+
+
+
+
+/**************************************
+    Medias queries Petit Desktop
+ **************************************/
+
+@media only screen and (min-width:768px){
+    .hamb{
+        display:none;
+    }
+
+    ul{
+        display:block;
+    }
+
+    .barrnav{
+        margin:0 auto;
+        float:unset;
+        background-color:lightgray;
+    }
+
+
+    li{
+        background-color:lightgray;
+        margin-left:80px;
+        padding-bottom:10px;
+        display:inline-block;
+        padding-right: 5px;
+        list-style: none;
+    }
+
+    /* Survol des liens du menu */
+    a:hover{
+        color:black;
+        padding:8px 10px 14px 10px;
+        background-color:blue;
+
+    }
+
+    li a {
+        color:black;
+        font-size:22px;
+    }
+
+    a:link{
+        text-decoration: none;
+    }
+}
+
