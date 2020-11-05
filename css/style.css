@@ -16,8 +16,13 @@ ul li {
 
 @media (min-width: 0px) {
   .barNav {
+    width: 100vw;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    -ms-flex-align: end;
+        align-items: flex-end;
     -ms-flex-pack: end;
         justify-content: flex-end;
     background-color: grey;
