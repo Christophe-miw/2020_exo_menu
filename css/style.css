@@ -1,0 +1,64 @@
+@media screen and (min-width: 800px) {
+    .barrNavOuv div {
+        display: flex;
+    }
+
+    .barrNavOuv button {
+        display: none;
+    }
+
+    .barrnav{
+        display: flex;
+    }
+
+    header{
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+    }
+}
+
+.barrnav{
+    display: flex;
+    flex-direction: column;
+}
+
+.barrnav button{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.barrNavOuv div{
+    display: none;
+}
+
+.barrnav div{
+    display: flex;
+}
+
+.barrNavOuv button{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+
+
+img{
+    width: 100%;
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.hamb{
+    width: 50px;
+}
+
+.fruit{
+    width: 150px;
+}
