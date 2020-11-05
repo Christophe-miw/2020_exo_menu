@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Eval Layout menu</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="tomate">
+    <nav class="barrnav flex">
+        <div id="hamb" class="hamb" onclick="toggle()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="toggle-target" class="none menu">
+            <a href="eval_layout_menu.html">accueil</a>
+            <a href="tomate.html">tomate</a>
+            <a href="cerise.html">cerise</a>
+        </div>
+    </nav>
+</body>
+
+<script>
+    function toggle() {
+        if (document.getElementById('toggle-target').classList.contains('none')) {
+            document.getElementById('toggle-target').classList.remove('none');
+            document.getElementById('hamb').classList.add('clicked');
+        } else {
+            document.getElementById('toggle-target').classList.add('none');
+            document.getElementById('hamb').classList.remove('clicked');
+        }
+    }
+</script>
+
+</html>
