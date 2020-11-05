@@ -2,27 +2,16 @@ $bar_height : 5px;
 $bar_width : 40px;
 $bar_color : #000000;
 $bar_translate : 10px;
-.menu_container {
-    width: 100vw;
-    display: flex;
-    min-height: 100vh;
-    padding: 20px 50px;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    transform: translateX(100%);
-    position: absolute;
-    top: 0;
-    left: 0;
-    &.open {
-        transform: translateX(0);
-    }
-    ul {
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        font-size: 2.5rem;
-    }
+$transition_time: .25s;
+$menu_bg_color : #FFFFFF;
+
+@mixin menu_bar {
+    transition: $transition_time;
+    content: '';
+    display: block;
+    width: $bar_width;
+    background-color: $bar_color;
+    height: $bar_height;
 }
 
 .menu_button {
@@ -39,50 +28,54 @@ $bar_translate : 10px;
 }
 
 span.menu_button_part {
-    content: '';
-    display: block;
-    width: $bar_width;
-    background-color: $bar_color;
-    height: $bar_height;
-    transition: .5s;
+    @include menu_bar();
     &::before {
-        transition: .25s;
-        content: '';
-        display: block;
-        width: $bar_width;
-        background-color: $bar_color;
-        height: $bar_height;
+        @include menu_bar();
         transform: translateY(-$bar_translate);
     }
     &::after {
-        transition: .25s;
-        content: '';
-        display: block;
-        width: $bar_width;
-        background-color: $bar_color;
-        height: $bar_height;
+        @include menu_bar;
         transform: translateY(calc(#{$bar_translate} - #{$bar_height}));
     }
-    &.cross {
-        transition: .5s;
+}
+
+nav.menu.open {
+    .menu_container {
+        transform: translateX(0);
+    }
+    span.menu_button_part {
+        transition: $transition_time;
         transform: rotate(45deg);
         &::before {
-            transition: .25s;
+            transition: $transition_time;
             transform: translateY(0) rotate(90deg);
         }
         &::after {
-            transition: .25s;
+            transition: $transition_time;
             transform: translateY(-#{$bar_height}) rotate(90deg);
         }
     }
 }
 
-.cross {
-
+.menu_container {
+    width: 100vw;
+    display: flex;
+    min-height: 100vh;
+    padding: 20px 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: $menu_bg_color;
+    transform: translateX(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        font-size: 2.5rem;
+    }
 }
-
-
-
 
 
 @media all and (min-width : 1024px) {
