@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+.none {
+  display: none;
+}
+
 body {
   background-size: cover;
   background-repeat: no-repeat;
@@ -65,10 +69,6 @@ body {
   transform: rotate(135deg);
   position: relative;
   top: -10px;
-}
-
-.none {
-  display: none;
 }
 
 .accueil {
