@@ -4,18 +4,26 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Eval Layout menu</title>
-		<link rel="stylesheet" href="css/mon_site.css">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/style.css">
+
 	</head>
 	<body>
+	<h1 class="titre">Accueil</h1>
 
 		<nav class="barrnav">
-			<img class="hamb" src="img/hamburger.png" alt="hamb">
-			<ul>
+			<div onclick="afficheMenu()">
+				<img class="hamb" src="img/hamburger.png" alt="hamb">
+			</div>
+			<ul class="afficheSousMenu">
 				<li><a class="tit" href="#">accueil</a></li>
-				...
+				<li><a class="tit" href="cerise.html">cerise</a></li>
+				<li><a class="tit" href="poire.html">poire</a></li>
+				<li><a class="tit" href="pomme.html">pomme</a></li>
+				<li><a class="tit" href="tomate.html">tomate</a></li>
 			</ul>
 		</nav>
 
-
+	<script src="script.js"></script>
 	</body>
 </html>
