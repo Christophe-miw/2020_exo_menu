@@ -1,0 +1,102 @@
+.hidden {
+  visibility: hidden;
+}
+
+.titre {
+  text-align: center;
+}
+
+h1 {
+  color: red;
+}
+
+.accueil {
+  background-image: url(../img/accueil.jpg);
+}
+
+.poire {
+  background-image: url(../img/cerise.jpg);
+}
+
+.pomme {
+  background-image: url(../img/pomme.jpg);
+}
+
+.tomate {
+  background-image: url(../img/tomate.jpg);
+}
+
+.cerise {
+  background-image: url(../img/cerise.jpg);
+}
+
+body {
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-position: center;
+}
+
+.barrnav {
+  width: 75px;
+  margin: 15px;
+  float: right;
+}
+
+#menu, .barrnav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#menu > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  border-radius: 10px;
+}
+
+#menu {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 150px;
+}
+
+#hamb:hover {
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 700px) {
+  a {
+    font-size: 2rem;
+  }
+  #hamb {
+    display: none;
+  }
+  #menu, .barrnav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .barrnav {
+    float: none;
+    width: 100%;
+    margin: 0px;
+  }
+  #menu {
+    visibility: visible;
+    height: 100%;
+    width: 100%;
+    background-color: green;
+  }
+}
+/*# sourceMappingURL=style.css.map */
