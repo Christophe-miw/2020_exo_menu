@@ -1,0 +1,56 @@
+.barrnav {
+  background-color: #008B8B;
+}
+
+.imgBurg {
+  width: 50px;
+  height: 50px;
+}
+
+.desktop_nav {
+  display: none;
+  flex-basis: 100%;
+  list-style: none;
+}
+
+.desktop_nav li a {
+  display: inline-block;
+  padding: 0.5em;
+}
+
+.menu-checkbox:checked ~ .desktop_nav {
+  display: block;
+}
+
+.menu-checkbox {
+  position: absolute;
+  opacity: 0;
+  top: -5000px;
+}
+
+.menu-toggle {
+  padding: 0.5em;
+}
+
+.nav-wrapper {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 800px) {
+  .menu-toggle,
+  .menu-checkbox {
+    display: none;
+  }
+
+  .desktop_nav {
+    display: block;
+    flex-basis: auto;
+  }
+
+  .desktop_nav li {
+    display: inline-block;
+  }
+}
