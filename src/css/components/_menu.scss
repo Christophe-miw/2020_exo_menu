@@ -1,0 +1,105 @@
+$bar_height : 5px;
+$bar_width : 40px;
+$bar_color : #000000;
+$bar_translate : 10px;
+.menu_container {
+    width: 100vw;
+    display: flex;
+    min-height: 100vh;
+    padding: 20px 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transform: translateX(100%);
+    position: absolute;
+    top: 0;
+    left: 0;
+    &.open {
+        transform: translateX(0);
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        font-size: 2.5rem;
+    }
+}
+
+.menu_button {
+    width: 50px;
+    cursor: pointer;
+    position: fixed;
+    top: 30px;
+    right: 20px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+span.menu_button_part {
+    content: '';
+    display: block;
+    width: $bar_width;
+    background-color: $bar_color;
+    height: $bar_height;
+    transition: .5s;
+    &::before {
+        transition: .25s;
+        content: '';
+        display: block;
+        width: $bar_width;
+        background-color: $bar_color;
+        height: $bar_height;
+        transform: translateY(-$bar_translate);
+    }
+    &::after {
+        transition: .25s;
+        content: '';
+        display: block;
+        width: $bar_width;
+        background-color: $bar_color;
+        height: $bar_height;
+        transform: translateY(calc(#{$bar_translate} - #{$bar_height}));
+    }
+    &.cross {
+        transition: .5s;
+        transform: rotate(45deg);
+        &::before {
+            transition: .25s;
+            transform: translateY(0) rotate(90deg);
+        }
+        &::after {
+            transition: .25s;
+            transform: translateY(-#{$bar_height}) rotate(90deg);
+        }
+    }
+}
+
+.cross {
+
+}
+
+
+
+
+
+@media all and (min-width : 1024px) {
+    .menu_container {
+        transform: translateX(0);;
+        min-height: inherit;
+        justify-content: flex-end;
+        ul {
+            flex-direction: row;
+            font-size: 1.15rem;
+            margin-bottom: 0;
+        }
+        li {
+            margin: 0 20px;
+        }
+    }
+    .menu_button {
+        display: none;
+    }
+}

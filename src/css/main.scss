@@ -4,13 +4,12 @@
 
 @import './fonts';
 
-@import './mixins';
-
 @import './classes';
 
 @import './global';
 
-@import './components';
+@import './components/menu';
+
+@import 'responsive';
 
 @import './layout';
-
