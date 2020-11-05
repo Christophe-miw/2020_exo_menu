@@ -32,12 +32,11 @@ html, body {
   -ms-flex-align: center;
       align-items: center;
   height: 88px;
-  padding-left: 28px;
   background-color: #FFFD;
 }
 
 .bienvenue h1 {
-  margin: 0;
+  margin: 0 0 0 28px;
 }
 
 .hamb, .checkMenu {

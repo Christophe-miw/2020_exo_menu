@@ -30,15 +30,18 @@ html, body {
   }
 }
 
+%bgNavbar {
+  background-color: #FFFD;
+}
+
 .bienvenue {
+  @extend %bgNavbar;
   display: flex;
   align-items: center;
   height: 88px;
-  padding-left: 28px;
   h1 {
-    margin: 0;
+    margin: 0 0 0 28px;
   }
-  background-color: #FFFD;
 }
 
 %hamburgerFixed {
@@ -59,11 +62,11 @@ html, body {
 }
 
 ul.menu {
+  @extend %bgNavbar;
   display: none;
   list-style: none;
   flex-direction: column;
   justify-content: space-between;
-  background-color: #FFFD;
   position: fixed;
   right: 0;
   margin: 0;
@@ -94,10 +97,10 @@ input[type='checkbox']:checked ~ ul.menu {
   }
 
   .barrnav {
+    @extend %bgNavbar;
     display: flex;
     align-items: center;
     margin: 0 auto;
-    background-color: #FFFD;
   }
 
   .bienvenue, ul.menu {
