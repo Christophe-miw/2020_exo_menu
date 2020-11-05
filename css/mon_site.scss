@@ -21,7 +21,7 @@ html, body {
   }
 }
 
-.bienvenue {
+.titre {
   @extend %bgNavbar;
   display: flex;
   align-items: center;
@@ -82,7 +82,7 @@ input[type='checkbox']:checked ~ ul.menu {
     margin: 0 auto;
   }
 
-  .bienvenue, ul.menu {
+  .titre, ul.menu {
     background: initial;
   }
 
