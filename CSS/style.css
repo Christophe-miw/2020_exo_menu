@@ -1,0 +1,104 @@
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* Background de la page Accueil */
+
+.accueil
+{
+    background-image: url("../img/accueil.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Background de la page Cerise */
+
+.cerise
+{
+    background-image: url("../img/cerise.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Background de la page Poire */
+
+.poire
+{
+    background-image: url("../img/poire.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Background de la page Pomme */
+
+.pomme
+{
+    background-image: url("../img/pomme.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+/* Background de la page Tomate */
+
+.tomate
+{
+    background-image: url("../img/tomate.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.barrnav
+{
+    background-color: #ACACAC;
+    width: 100%;
+}
+
+.titre
+{
+    width: 100%;
+    font-size: 12px;
+}
+
+.cache
+{
+    display: none;
+}
+
+.deplie
+{
+    display: block;
+}
+
+@media screen and (min-width: 800px)
+{
+    .bouton
+    {
+        display: none;
+    }
+
+    .titre
+    {
+        font-size: 16px;
+    }
+
+    .cache
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .deplie
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
