@@ -1,9 +1,17 @@
+// CONFIG
 $bar_height : 5px;
 $bar_width : 40px;
 $bar_color : #000000;
 $bar_translate : 10px;
 $transition_time: .25s;
 $menu_bg_color : #FFFFFF;
+$breakpoint : 1024px;
+$items_font-size : 2.5rem;
+$desktop_menu_padding : 20px 30px;
+
+body {
+    overflow-x: hidden;
+}
 
 @mixin menu_bar {
     transition: $transition_time;
@@ -15,15 +23,11 @@ $menu_bg_color : #FFFFFF;
 }
 
 .menu_button {
-    width: 50px;
     cursor: pointer;
     position: fixed;
     top: 30px;
     right: 20px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 20px 10px;
     z-index: 2;
 }
 
@@ -61,7 +65,6 @@ nav.menu.open {
     width: 100vw;
     display: flex;
     min-height: 100vh;
-    padding: 20px 50px;
     align-items: center;
     justify-content: center;
     background-color: $menu_bg_color;
@@ -73,16 +76,18 @@ nav.menu.open {
         display: flex;
         flex-direction: column;
         padding: 0;
-        font-size: 2.5rem;
+        font-size: $items_font-size;
+        list-style: none;
     }
 }
 
 
-@media all and (min-width : 1024px) {
+@media all and (min-width : $breakpoint) {
     .menu_container {
         transform: translateX(0);;
         min-height: inherit;
         justify-content: flex-end;
+        padding: $desktop_menu_padding;
         ul {
             flex-direction: row;
             font-size: 1.15rem;
@@ -96,3 +101,33 @@ nav.menu.open {
         display: none;
     }
 }
+
+
+
+/* JS
+
+let button_part = document.querySelector('.menu_button_part')
+let menu = document.querySelector('.menu')
+
+document.querySelector('.menu_button').addEventListener('click', () => {
+    menu.classList.toggle('open')
+})
+
+*/
+
+
+/*HTML 
+
+<nav class="menu">
+    <div class="menu_button">
+        <span class="menu_button_part"></span>
+    </div>
+    <div class="menu_container">
+        <ul>
+            <li><a class="menu_item" href="index.html">accueil</a></li>
+            .......
+        </ul>	
+    </div>
+</nav>
+
+*/
