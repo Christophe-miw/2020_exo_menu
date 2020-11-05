@@ -21,7 +21,8 @@ ul li {
     -ms-flex-pack: end;
         justify-content: flex-end;
     background-color: grey;
-    height: 50px;
+    min-height: 50px;
+    height: auto;
   }
   .hamb {
     width: 40px;
@@ -29,6 +30,16 @@ ul li {
   }
   .nav {
     display: none;
+  }
+  .dropdown {
+    display: none;
+  }
+  input[type='checkbox']:checked ~ .nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    margin-top: 10px;
   }
 }
 
@@ -43,7 +54,6 @@ ul li {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
-    height: 50px;
     -ms-flex-pack: space-evenly;
         justify-content: space-evenly;
     -ms-flex-align: center;
