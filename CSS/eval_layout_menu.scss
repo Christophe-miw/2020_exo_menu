@@ -1,0 +1,169 @@
+@mixin display_flex($justify-content,$flex-wrap,$flex-direction) {
+  display: flex;
+  justify-content: $justify-content;
+  flex-wrap: $flex-wrap;
+  flex-direction: $flex-direction;
+}
+
+@mixin taille($width,$height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin colored($bkg,$col) {
+  color: $col;
+  background-color: $bkg;
+}
+
+$couleurFondMenuTel: grey;
+
+$imageCover: "../img/accueil.jpg";
+
+$couleurItemMenu: darkgrey;
+$couleurTextMenuTel: black;
+
+/***********************************/
+/*          INITALISATION          */
+/*                                 */
+/***********************************/
+
+html, body, nav, header, footer {
+  margin: 0px;
+  padding: 0px;
+}
+
+ul, ol, li, a {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+  text-decoration: none;
+  text-align: center;
+}
+
+/***********************************/
+/*             DEFAULT             */
+/*            TELEPHONE            */
+/***********************************/
+
+h1, h2, h3, h4, h5, .tit {
+  color: white;
+  border: black solid 1px;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: black;
+}
+
+.displayNone {
+  display: none;
+}
+
+.displayBlock {
+  display: block;
+}
+
+.coverFond {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url($imageCover);
+}
+
+.Center {
+  @include taille(100%, 100vh);
+}
+
+.flexCenterRow {
+  @include display_flex(center, nowrap, row);
+}
+
+.flexCenterRowInver {
+  @include display_flex(center, nowrap, row-reverse);
+}
+
+.flexCenterCol {
+  @include display_flex(center, nowrap, column);
+}
+
+.barrnav {
+  @include taille(100%, 100%);
+  align-items: center;
+
+  img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: auto;
+    max-width: 100%;
+    margin-left: 25px;
+    z-index: 1;
+  }
+}
+
+
+#UlMenu {
+  position: absolute;
+  top: 25%;
+  z-index: 1;
+}
+
+.RowA {
+  margin: 5px;
+  padding: 20px;
+}
+
+.RowA:hover {
+  @include colored($couleurItemMenu, $couleurTextMenuTel);
+}
+
+.navGrey {
+  /*transition: 250ms;*/
+  z-index: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  @include taille(100%, 100%);
+  background-color: $couleurFondMenuTel;
+}
+
+/***********************************/
+/*             DESKTOP             */
+/***********************************/
+@media screen and (min-width: 970px) {
+
+  .displayBlock {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+
+  #UlMenu {
+    position: relative;
+    top: 0;
+  }
+
+  .RowA {
+    padding: 0px;
+    border: darkgrey solid 1px;
+  }
+
+  .barrnav {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: auto;
+    height: 80px;
+
+    img {
+      position: relative;
+      top: 0;
+      right: 0;
+      width: 70px;
+    }
+  }
+  .navGrey {
+    background-color: transparent;
+  }
+
+}
