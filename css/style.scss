@@ -49,6 +49,12 @@ ul li{
 $heightNavNar : 40px;
 $fontsize-desktop: 1.3em;
 
+/* ------- DEFINITION DES BACKGROUNDS POUR CHAQUE PAGE ------- */
+.accueil{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('../img/accueil.jpg');
+} 
 /* ------- STYLE POUR ECRAN TAILLE SMALL ------- */
 @include respond-to('small') {
     .barNav{
@@ -81,7 +87,7 @@ $fontsize-desktop: 1.3em;
             align-items: center;
             font-size: 2em;
         }
-    }   
+    }  
 }
 
 /* ------- STYLE POUR ECRAN TAILLE MEDIUM ------- */
@@ -121,7 +127,5 @@ $fontsize-desktop: 1.3em;
                 }
             }
             
-        }
-        
-    
+        }    
 }

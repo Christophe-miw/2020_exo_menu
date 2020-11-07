@@ -17,6 +17,13 @@ ul li {
 
 /* ------- MIXIN RACCOURCIS ------- */
 /* ------- DECLARATION VARIABLES ------- */
+/* ------- DEFINITION DES BACKGROUNDS POUR CHAQUE PAGE ------- */
+.accueil {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("../img/accueil.jpg");
+}
+
 /* ------- STYLE POUR ECRAN TAILLE SMALL ------- */
 @media (min-width: 0px) {
   .barNav {
