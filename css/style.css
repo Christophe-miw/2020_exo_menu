@@ -3,8 +3,12 @@ img {
   width: 100%;
 }
 
-a {
+a, a:hover {
   color: white;
+}
+
+a:link {
+  text-decoration: none;
 }
 
 ul {
@@ -19,9 +23,8 @@ ul li {
 /* ------- DECLARATION VARIABLES ------- */
 /* ------- DEFINITION DES BACKGROUNDS POUR CHAQUE PAGE ------- */
 .accueil {
-  background-size: cover;
-  background-repeat: no-repeat;
   background-image: url("../img/accueil.jpg");
+  background-repeat: no-repeat;
 }
 
 /* ------- STYLE POUR ECRAN TAILLE SMALL ------- */
@@ -34,7 +37,7 @@ ul li {
     width: 100%;
     -ms-flex-align: end;
         align-items: flex-end;
-    background-color: grey;
+    background-color: #DD0426;
     min-height: 40px;
     height: auto;
   }
@@ -96,7 +99,18 @@ ul li {
     font-size: 1.3em;
   }
   .barNav .nav li {
-    margin-right: 40px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 55px;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .barNav .nav li:hover {
+    background-color: #F02D3A;
   }
 }
 

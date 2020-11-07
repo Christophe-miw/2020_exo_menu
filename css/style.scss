@@ -29,8 +29,11 @@ $breakpoints: (
 img{
     width: 100%;
 }
-a{
+a,a:hover{
     color:white
+}
+a:link{
+    text-decoration: none;
 }
 ul{
     list-style-type: none;
@@ -48,12 +51,13 @@ ul li{
 /* ------- DECLARATION VARIABLES ------- */
 $heightNavNar : 40px;
 $fontsize-desktop: 1.3em;
+$bgColor: #DD0426;
+$bgColor-hover: #F02D3A;
 
 /* ------- DEFINITION DES BACKGROUNDS POUR CHAQUE PAGE ------- */
 .accueil{
-    background-size: cover;
-    background-repeat: no-repeat;
     background-image: url('../img/accueil.jpg');
+    background-repeat: no-repeat;
 } 
 /* ------- STYLE POUR ECRAN TAILLE SMALL ------- */
 @include respond-to('small') {
@@ -61,7 +65,7 @@ $fontsize-desktop: 1.3em;
         //Mettre les elements de la barNav en colonne + hauteur adaptable au contenu
         @include flex-column;
         align-items: flex-end;
-        background-color: grey;
+        background-color: $bgColor;
         min-height: $heightNavNar;
         height: auto;
 
@@ -79,7 +83,9 @@ $fontsize-desktop: 1.3em;
         //Par defaut, rendre les liens invisible
         .nav{
             display: none;
+        
         }
+        
 
         //Afficher liens en colonne centrer
         input[type='checkbox']:checked ~ .nav{
@@ -123,7 +129,16 @@ $fontsize-desktop: 1.3em;
                 
                 //Espacer les liens entre-eux
                 li {
-                    margin-right: 40px;
+                    display: flex;
+                    flex-direction: column;
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    height: 55px;
+                    justify-content: center;
+                                      
+                }
+                li:hover{
+                    background-color: $bgColor-hover;
                 }
             }
             
