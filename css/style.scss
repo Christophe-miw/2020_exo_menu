@@ -25,6 +25,18 @@ $breakpoints: (
             + "Vérifier que  `$breakpoints` est définit dans la map.";
     }
 }
+/* ------- MIXIN RACCOURCIS ------- */
+@mixin flex-column{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+/* ------- DECLARATION VARIABLES ------- */
+$heightNavNar : 50px;
+$fontsize-desktop: 1.3em;
+$bgColor: #DD0426;
+$bgColor-hover: #F02D3A;
+
 /* ------- GENERAL ------- */
 img{
     width: 100%;
@@ -41,24 +53,38 @@ ul{
 ul li{
     margin: 0px 10px 0px 10px;
 }
-/* ------- MIXIN RACCOURCIS ------- */
-@mixin flex-column{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-}
 
-/* ------- DECLARATION VARIABLES ------- */
-$heightNavNar : 50px;
-$fontsize-desktop: 1.3em;
-$bgColor: #DD0426;
-$bgColor-hover: #F02D3A;
+.titlePage{
+    display: block;
+    position: absolute;
+    left:43%;
+    top:43%;
+
+    color:white;
+    background-color: $bgColor;
+    border-radius: 5px;
+    font-size: 5vw;
+}
 
 /* ------- DEFINITION DES BACKGROUNDS POUR CHAQUE PAGE ------- */
 .accueil{
     background-image: url('../img/accueil.jpg');
     background-repeat: no-repeat;
-} 
+    background-size: cover;
+}
+.main{
+        height: 80vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1{
+            background-color: $bgColor;
+            color: white;
+            border-radius: 5px;
+            font-size:5vw;
+        }
+}
+
 /* ------- STYLE POUR ECRAN TAILLE SMALL ------- */
 @include respond-to('small') {
     .barNav{
@@ -98,6 +124,7 @@ $bgColor-hover: #F02D3A;
             @include flex-column;
             align-items: center;
             font-size: 2em;
+
         }
     }  
 }
