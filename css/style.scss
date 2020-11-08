@@ -49,7 +49,7 @@ ul li{
 }
 
 /* ------- DECLARATION VARIABLES ------- */
-$heightNavNar : 40px;
+$heightNavNar : 50px;
 $fontsize-desktop: 1.3em;
 $bgColor: #DD0426;
 $bgColor-hover: #F02D3A;
@@ -65,13 +65,19 @@ $bgColor-hover: #F02D3A;
         //Mettre les elements de la barNav en colonne + hauteur adaptable au contenu
         @include flex-column;
         align-items: flex-end;
+        justify-content: flex-start;
         background-color: $bgColor;
         min-height: $heightNavNar;
         height: auto;
 
+        /* Aligner verticalement le label */
+        label{
+            line-height: 40px;
+            
+        }
         //Taille de l'hamburger = taille de la navBar et decaler hamburger à gauche
-        .hamb{
-            width: $heightNavNar;
+        .hamb{          
+            width: 40px;
             margin-right: 20px;
         }
 
@@ -99,10 +105,10 @@ $bgColor-hover: #F02D3A;
 /* ------- STYLE POUR ECRAN TAILLE MEDIUM ------- */
 @include respond-to('medium') {
         .barNav{
-            height: 50px;
+            height: $heightNavNar;
             display: flex;
             justify-content: center;
-
+            
             //Masque l'hamburger
              .hamb{
                 display: none;
