@@ -1,0 +1,159 @@
+/* ------- MIXIN RACCOURCIS ------- */
+/* ------- DECLARATION VARIABLES ------- */
+/* ------- GENERAL ------- */
+img {
+  width: 100%;
+}
+
+a, a:hover {
+  color: white;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  margin: 0px 10px 0px 10px;
+}
+
+/* ------- DEFINITION DES BACKGROUNDS POUR CHAQUE PAGE ------- */
+.accueil, .cerise, .poire, .pomme, .tomate {
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.accueil {
+  background-image: url("../img/accueil.jpg");
+}
+
+.cerise {
+  background-image: url("../img/cerise.jpg");
+}
+
+.poire {
+  background-image: url("../img/poire.jpg");
+}
+
+.pomme {
+  background-image: url("../img/pomme.jpg");
+}
+
+.tomate {
+  background-image: url("../img/tomate.jpg");
+}
+
+.main {
+  height: 80vh;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+}
+
+.main h1 {
+  background-color: #DD0426;
+  color: white;
+  border-radius: 5px;
+  font-size: 5vw;
+}
+
+/* ------- STYLE POUR ECRAN TAILLE SMALL ------- */
+@media (min-width: 0px) {
+  .barNav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    width: 100%;
+    -ms-flex-align: end;
+        align-items: flex-end;
+    -ms-flex-pack: start;
+        justify-content: flex-start;
+    background-color: #DD0426;
+    min-height: 50px;
+    height: auto;
+    /* Aligner verticalement le label */
+  }
+  .barNav label {
+    line-height: 40px;
+  }
+  .barNav .hamb {
+    width: 40px;
+    margin-right: 20px;
+  }
+  .barNav .dropdown {
+    display: none;
+  }
+  .barNav .nav {
+    display: none;
+  }
+  .barNav input[type='checkbox']:checked ~ .nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    width: 100%;
+    -ms-flex-align: center;
+        align-items: center;
+    font-size: 2em;
+  }
+}
+
+/* ------- STYLE POUR ECRAN TAILLE MEDIUM ------- */
+@media (min-width: 800px) {
+  .barNav {
+    height: 50px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .barNav .hamb {
+    display: none;
+  }
+  .barNav input[type='checkbox']:checked ~ .nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    -ms-flex-align: center;
+        align-items: center;
+    font-size: 1.3em;
+    width: 100%;
+  }
+  .barNav .nav {
+    height: 50px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: row;
+        flex-direction: row;
+    width: 100%;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex-align: center;
+        align-items: center;
+    font-size: 1.3em;
+  }
+  .barNav .nav li {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+        flex-direction: column;
+    padding: 0px 20px 0px 20px;
+    height: 55px;
+    -ms-flex-pack: center;
+        justify-content: center;
+  }
+  .barNav .nav li:hover {
+    background-color: #F02D3A;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
