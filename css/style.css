@@ -21,46 +21,30 @@ ul li {
   margin: 0px 10px 0px 10px;
 }
 
-.titlePage {
-  display: block;
-  position: absolute;
-  left: 43%;
-  top: 43%;
-  color: white;
-  background-color: #DD0426;
-  border-radius: 5px;
-  font-size: 5vw;
-}
-
 /* ------- DEFINITION DES BACKGROUNDS POUR CHAQUE PAGE ------- */
-.accueil {
-  background-image: url("../img/accueil.jpg");
+.accueil, .cerise, .poire, .pomme, .tomate {
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.accueil {
+  background-image: url("../img/accueil.jpg");
 }
 
 .cerise {
   background-image: url("../img/cerise.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .poire {
   background-image: url("../img/poire.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .pomme {
   background-image: url("../img/pomme.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .tomate {
   background-image: url("../img/tomate.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .main {
@@ -162,8 +146,7 @@ ul li {
     display: flex;
     -ms-flex-direction: column;
         flex-direction: column;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 0px 20px 0px 20px;
     height: 55px;
     -ms-flex-pack: center;
         justify-content: center;

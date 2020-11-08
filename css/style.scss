@@ -31,6 +31,10 @@ $breakpoints: (
     flex-direction: column;
     width: 100%;
 }
+@mixin noRepeat-cover{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 /* ------- DECLARATION VARIABLES ------- */
 $heightNavNar : 50px;
 $fontsize-desktop: 1.3em;
@@ -54,43 +58,25 @@ ul li{
     margin: 0px 10px 0px 10px;
 }
 
-.titlePage{
-    display: block;
-    position: absolute;
-    left:43%;
-    top:43%;
-
-    color:white;
-    background-color: $bgColor;
-    border-radius: 5px;
-    font-size: 5vw;
-}
-
 /* ------- DEFINITION DES BACKGROUNDS POUR CHAQUE PAGE ------- */
+.accueil, .cerise, .poire, .pomme, .tomate{
+    @include noRepeat-cover;
+}
 .accueil{
     background-image: url('../img/accueil.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 .cerise{
     background-image: url('../img/cerise.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+
 }
 .poire{
     background-image: url('../img/poire.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 .pomme{
     background-image: url('../img/pomme.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 .tomate{
     background-image: url('../img/tomate.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 .main{
         height: 80vh;
@@ -118,8 +104,7 @@ ul li{
 
         /* Aligner verticalement le label */
         label{
-            line-height: 40px;
-            
+            line-height: 40px;           
         }
         //Taille de l'hamburger = taille de la navBar et decaler hamburger à gauche
         .hamb{          
@@ -184,8 +169,7 @@ ul li{
                 li {
                     display: flex;
                     flex-direction: column;
-                    padding-left: 20px;
-                    padding-right: 20px;
+                    padding: 0px 20px 0px 20px;
                     height: 55px;
                     justify-content: center;
                                       
