@@ -1,9 +1,9 @@
 
-// variables
+// impotation du reset css, variables et autre
+@import '_variables.scss';
+@import '_reset.scss';
+@import '_menuHamburger.scss';
 
-.hidden{
-    visibility: hidden;
-}
 
 .titre{
     text-align:center;
@@ -36,56 +36,10 @@ body{
     background-position: center;
 }
 
-.barrnav{
-    width: 75px;
-    margin: 15px;
-    float: right;
-}
-
-#menu, .barrnav{
-    display: flex;
-    flex-direction: column;
-}
-
-#menu>div{
-    display: flex;
-    justify-content: center;
-    background-color: white;
-    border-radius: 10px;
-}
-
-#menu{
-    justify-content: space-around;
-    height: 150px;
-}
-
-
-#hamb:hover{
-    opacity: 0.5;
-}
-
 
 // desktop et tablettes
 @media screen and (min-width: 700px) {
     a{
         font-size: 2rem;
-    }
-    #hamb {
-        display: none;
-    }
-
-    #menu, .barrnav{
-        flex-direction: row;
-    }
-    .barrnav{
-        float: none;
-        width: 100%;
-        margin: 0px;
-    }
-    #menu{
-        visibility: visible;
-        height: 100%;
-        width: 100%;
-        background-color: green;
     }
 }
