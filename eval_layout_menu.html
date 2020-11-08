@@ -1,21 +1,41 @@
 <!DOCTYPE html>
-<html class="accueil" lang="fr">
+<html lang="fr">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Eval Layout menu</title>
-		<link rel="stylesheet" href="css/mon_site.css">
+		<link rel="stylesheet" href="style/style.css">
+
 	</head>
-	<body>
+	<body class="accueil">
+
+		<h1 class="titre">Accueil</h1>
+
 
 		<nav class="barrnav">
-			<img class="hamb" src="img/hamburger.png" alt="hamb">
-			<ul>
-				<li><a class="tit" href="#">accueil</a></li>
-				...
-			</ul>
+			<div class="hamb" onclick="toggle()">
+				<img class="hambico" src="img/hamburger.png" alt="icone menu burger">
+			</div>
+			<div class="menu hidden">
+				<div><a href="cerise.html">cerise</a></div>
+				<div><a href="pomme.html">pomme</a></div>
+				<div><a href="poire.html">poire</a></div>
+				<div><a href="tomate.html">tomate</a></div>
+			</div>
 		</nav>
 
+		<script>
+			function toggle() {
+				let elementToToggle = document.getElementsByClassName("menu")[0];
+				elementToToggle.classList.toggle("hidden");
+
+				let img1 = "img/hamburger.png",
+					img2 = "img/exitico.svg";
+					   
+				let imgElement = document.getElementsByClassName('hambico')[0];
+   				imgElement.src = (imgElement.attributes.src.value === img1)? img2 : img1;	
+			}
+		</script>
 
 	</body>
 </html>

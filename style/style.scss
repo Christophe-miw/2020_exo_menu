@@ -1,0 +1,45 @@
+
+// impotation du reset css, variables et autre
+@import '_variables.scss';
+@import '_reset.scss';
+@import '_menuHamburger.scss';
+
+
+.titre{
+    text-align:center;
+}
+h1{
+   color: red; 
+}
+
+// definir les fonds decran en fonction de la class
+.accueil {
+    background-image: url(../img/accueil.jpg);
+}
+.poire{
+    background-image: url(../img/cerise.jpg);
+}
+.pomme{
+    background-image: url(../img/pomme.jpg);
+}
+.tomate{
+    background-image: url(../img/tomate.jpg);
+}
+.cerise{
+    background-image: url(../img/cerise.jpg);
+}
+
+body{
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
+}
+
+
+// desktop et tablettes
+@media screen and (min-width: 700px) {
+    a{
+        font-size: 2rem;
+    }
+}
